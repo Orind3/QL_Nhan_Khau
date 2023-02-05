@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="phanThuongPane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="704.0" prefWidth="1181.0" style="-fx-background-color: #2F333D;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.thuPhi.ThuPhiController">
+   <children>
+      <Label layoutX="500.0" layoutY="64.0" text="Thu phí" textFill="#f8f3f3">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <Pane layoutX="188.0" layoutY="149.0" prefHeight="290.0" prefWidth="340.0">
+         <children>
+            <ImageView fitHeight="205.0" fitWidth="217.0" layoutX="81.0" layoutY="64.0" nodeOrientation="INHERIT" onMouseClicked="#phiVeSinhClicked" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/vesinh.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="603.0" layoutY="149.0" prefHeight="290.0" prefWidth="340.0">
+         <children>
+            <ImageView fitHeight="182.0" fitWidth="188.0" layoutX="76.0" layoutY="77.0" onMouseClicked="#phiUngHoClicked" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/ungho.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></ImageView>
+         </children>
+      </Pane>
+      <Label layoutX="305.0" layoutY="422.0" text="Phí vệ sinh" textFill="#f8f3f3">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="703.0" layoutY="424.0" text="Phí ủng hộ" textFill="#f8f3f3">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

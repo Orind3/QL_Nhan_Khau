@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ButtonType?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<DialogPane prefHeight="380.0" prefWidth="584.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.thongKe.ThongTinChiTietController">
+   <content>
+      <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="367.0" prefWidth="625.0">
+         <children>
+            <Label layoutX="223.0" layoutY="25.0" text="Thông tin chi tiết">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="122.0" layoutY="95.0" />
+            <Label layoutX="383.0" layoutY="160.0" text="ID hộ khẩu:">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="58.0" layoutY="220.0" text="Mã hộ khẩu:">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="58.0" layoutY="289.0" text="Tên chủ hộ:">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="387.0" layoutY="95.0" text="Số tiền đã đóng:">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="58.0" layoutY="160.0" text="Tên quỹ:">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="387.0" layoutY="220.0" text="Đợt:">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="387.0" layoutY="289.0" text="Thời gian:">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="58.0" layoutY="95.0" text="Mã ủng hộ:">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="idHoKhauLabel" layoutX="499.0" layoutY="160.0" text="ID hộ khẩu">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="maHoKhauLabel" layoutX="170.0" layoutY="220.0" text="Mã hộ khẩu">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="tenChuHoLabel" layoutX="172.0" layoutY="289.0" text="Tên chủ hộ">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="soTienDaDongLabel" layoutX="499.0" layoutY="95.0" text="Số tiền đã đóng">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="tenQuyLabel" layoutX="170.0" layoutY="160.0" text="Tên quỹ">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="dotLabel" layoutX="503.0" layoutY="220.0" text="Đợt">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="thoiGianLebel" layoutX="503.0" layoutY="289.0" text="Thời gian">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="maUngHoLabel" layoutX="173.0" layoutY="94.0" text="Mã ủng hộ">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </content>
+   <buttonTypes>
+      <ButtonType fx:constant="CLOSE" />
+   </buttonTypes>
+</DialogPane>
