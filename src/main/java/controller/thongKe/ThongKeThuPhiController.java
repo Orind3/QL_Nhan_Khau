@@ -83,7 +83,7 @@ public class ThongKeThuPhiController implements Initializable {
 
         dotColumn.setCellValueFactory(new PropertyValueFactory<>("dot"));
         tenChuHoColumn.setCellValueFactory(new PropertyValueFactory<>("tenChuHo"));
-        maHoKhauColumn.setCellValueFactory(new PropertyValueFactory<>("maHoKhau"));
+        maHoKhauColumn.setCellValueFactory(new PropertyValueFactory<>("IDHoKhau"));
         soTienColumn.setCellValueFactory(new PropertyValueFactory<>("soTienDaDong"));
         tenQuyColumn.setCellValueFactory(new PropertyValueFactory<>("quy"));
         thoiGianColumn.setCellValueFactory(new PropertyValueFactory<>("date"));
@@ -144,7 +144,7 @@ public class ThongKeThuPhiController implements Initializable {
             dotChoiceBox.setItems(listDot);
             quyChoiceBox.setItems(listQuy);
             hoKhauChoiceBox.setItems(listHoKhau);
-            query = "SELECT thu_phi.maKhoanThu,thu_phi.IDHoKhau,ho_khau.idHoKhau,nhan_khau.hoTen,thu_phi.soTien,thu_phi.tenKhoanThu,thu_phi.ghiChu,thu_phi.dot,thu_phi.ngayNop FROM thu_phi LEFT JOIN ho_khau ON thu_phi.IDHoKhau = ho_khau.idHoKhau LEFT JOIN nhan_khau on nhan_khau.idNhanKhau = ho_khau.idChuHo";
+            query = "SELECT thu_phi.maKhoanThu,ho_khau.idHoKhau,nhan_khau.hoTen,thu_phi.soTien,thu_phi.tenKhoanThu,thu_phi.ghiChu,thu_phi.dot,thu_phi.ngayNop FROM thu_phi LEFT JOIN ho_khau ON thu_phi.IDHoKhau = ho_khau.idHoKhau LEFT JOIN nhan_khau on nhan_khau.idNhanKhau = ho_khau.idChuHo";
             st = con.prepareStatement(query);
             rs = st.executeQuery(query);
             while(rs.next()){
@@ -205,6 +205,7 @@ public class ThongKeThuPhiController implements Initializable {
         }
         Vector<Integer> soHoKhau = new Vector<Integer>();
         boolean check = true;
+        tongtien = 0;
         for(UngHoModel i: listUpdate){
             tongtien += Integer.parseInt(i.getSoTienDaDong());
             this.soTienLabel.setText(String.valueOf(tongtien));

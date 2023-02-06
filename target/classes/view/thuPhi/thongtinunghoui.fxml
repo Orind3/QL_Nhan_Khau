@@ -36,19 +36,14 @@
             <Font name="System Bold" size="14.0" />
          </font></Label>
       <TextField fx:id="dotTxtField" layoutX="108.0" layoutY="257.0" prefHeight="25.0" prefWidth="45.0" />
-      <ImageView fitHeight="50.0" fitWidth="153.0" layoutX="10.0" layoutY="19.0" onMouseClicked="#backMouseClick" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../image/back.png" />
-         </image>
-      </ImageView>
       <Label layoutX="340.0" layoutY="22.0" text="Quản lý phần thưởng dịp đặc biệt" textFill="#332a99">
          <font>
             <Font name="System Bold" size="30.0" />
          </font>
       </Label>
-      <Pane layoutX="10.0" layoutY="10.0" prefHeight="66.0" prefWidth="973.0" style="-fx-background-color: #FFFFC9;">
+      <Pane layoutX="-7.0" layoutY="-6.0" prefHeight="66.0" prefWidth="1318.0" style="-fx-background-color: #FFFFC9;">
          <children>
-            <ImageView fitHeight="50.0" fitWidth="153.0" layoutY="9.0" onMouseClicked="#backMouseClick" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="50.0" fitWidth="153.0" layoutX="20.0" layoutY="11.0" onMouseClicked="#backMouseClick" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../image/back.png" />
                </image>
