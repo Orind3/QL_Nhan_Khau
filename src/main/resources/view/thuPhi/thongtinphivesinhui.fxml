@@ -62,9 +62,9 @@
             <Font name="System Bold" size="30.0" />
          </font>
       </Label>
-      <Pane layoutX="-14.0" prefHeight="66.0" prefWidth="1403.0" style="-fx-background-color: #FFFFC9;">
+      <Pane prefHeight="66.0" prefWidth="1389.0" style="-fx-background-color: #FFFFC9;">
          <children>
-            <ImageView fitHeight="50.0" fitWidth="153.0" layoutX="24.0" layoutY="7.0" onMouseClicked="#backClick" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="50.0" fitWidth="153.0" layoutX="14.0" layoutY="8.0" onMouseClicked="#backClick" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../image/back.png" />
                </image>

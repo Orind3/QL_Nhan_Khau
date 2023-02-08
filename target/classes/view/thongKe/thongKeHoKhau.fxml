@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-<Pane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="721.0" prefWidth="1180.0" style="-fx-background-color: #2F333D;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.thongKe.ThongKeHoKhauController">
+<Pane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="721.0" prefWidth="1180.0" style="-fx-background-color: #2F333D;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.thongKe.ThongKeHoKhauController">
     <children>
-        <Pane prefHeight="66.0" prefWidth="1180.0" style="-fx-background-color: #FFFFC9;">
+        <Pane prefHeight="66.0" prefWidth="1180.0" style="-fx-background-color: #11bd8e;">
             <children>
                 <TextField alignment="CENTER" editable="false" layoutX="329.0" layoutY="2.0" prefHeight="38.0" prefWidth="523.0" style="-fx-background-color: 0; -fx-text-inner-color: #332A99;" text="Thống kê hộ khẩu">
                     <font>
@@ -21,7 +23,7 @@
                 </ImageView>
             </children>
         </Pane>
-      <Pane fx:id="trangThai" layoutX="36.0" layoutY="184.0" prefHeight="385.0" prefWidth="395.0" style="-fx-background-color: #FFFF8D;">
+      <Pane fx:id="trangThai" layoutX="36.0" layoutY="184.0" prefHeight="385.0" prefWidth="395.0" style="-fx-background-color: #11bd8e;">
          <children>
             <Label layoutX="149.0" layoutY="14.0" text="Trạng thái" textFill="#2f333d">
                <font>
@@ -30,7 +32,7 @@
             </Label>
          </children>
       </Pane>
-      <Pane fx:id="soLuong" layoutX="455.0" layoutY="184.0" prefHeight="385.0" prefWidth="656.0" style="-fx-background-color: #FFFF8D;">
+      <Pane fx:id="soLuong" layoutX="455.0" layoutY="184.0" prefHeight="385.0" prefWidth="656.0" style="-fx-background-color: #11bd8e;">
          <children>
             <Label layoutX="233.0" layoutY="14.0" text="Số lượng thành viên" textFill="#2f333d">
                <font>

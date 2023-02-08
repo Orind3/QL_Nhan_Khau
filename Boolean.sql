@@ -1,4 +1,4 @@
-﻿CREATE DATABASE nmcnpm_team4;
+﻿CREATE DATABASE quan_ly_dan_cu;
 
 USE nmcnpm_team4;
 
@@ -172,61 +172,7 @@ CREATE TABLE dip_dac_biet(
 INSERT INTO dip_dac_biet(ten, nam, moTa, phanQua05, phanQua614, phanQua1517, tien05, tien614, tien1517) VALUES
                                                                                                             (N'Tết Trung Thu', 2020, NULL, N'1 mũ len', N'1 khăn len', N'1 đôi tất', 20000, 23000, 15000),
                                                                                                             (N'Giáng Sinh', 2020, NULL, N'1 gấu bông', N'5 cây kẹo mút', N'1 bao tay', 30000, 20000, 25000);
-
--- 10. Dịp học sinh giỏi
-CREATE TABLE dip_hoc_sinh_gioi(
-                                  idDip INT NOT NULL AUTO_INCREMENT,
-                                  nam INT NOT NULL,
-                                  moTa NVARCHAR(255),
-                                  phanQuaDacBiet NVARCHAR(255) NOT NULL,
-                                  phanQuaGioi NVARCHAR(255) NOT NULL,
-                                  phanQuaKha NVARCHAR(255) NOT NULL,
-                                  tienDacBiet FLOAT NOT NULL,
-                                  tienGioi FLOAT NOT NULL,
-                                  tienKha FLOAT NOT NULL,
-                                  CONSTRAINT PK_dip_hoc_sinh_gioi PRIMARY KEY(idDip)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
-INSERT INTO dip_hoc_sinh_gioi(nam, moTa, phanQuaDacBiet, phanQuaGioi, phanQuaKha, tienDacBiet, tienGioi, tienKha) VALUES
-                                                                                                                      (2020, NULL, N'10 quyển vở', N'7 quyển vở', N'5 quyển vở', 50000, 35000, 25000),
-                                                                                                                      (2021, NULL, N'10 quyển vở', N'7 quyển vở', N'5 quyển vở', 50000, 35000, 25000);
-
--- 11. Chi tiết dịp đặc biệt
-CREATE TABLE chi_tiet_dip_dac_biet(
-                                      idDip INT NOT NULL,
-                                      idNhanKhau INT NOT NULL,
-                                      nhom INT NOT NULL,
-                                      kiemtra BOOLEAN NOT NULL,
-                                      CONSTRAINT PK_chi_tiet_dip_dac_biet PRIMARY KEY(idDip, idNhanKhau),
-                                      CONSTRAINT FK_chi_tiet_dip_dac_biet_dip_dac_biet FOREIGN KEY(idDip) REFERENCES dip_dac_biet(idDip) ON DELETE CASCADE,
-                                      CONSTRAINT FK_chi_tiet_dip_dac_biet FOREIGN KEY(idNhanKhau) REFERENCES nhan_khau(idNhanKhau) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
-INSERT INTO chi_tiet_dip_dac_biet(idDip, idNhanKhau, nhom, kiemtra) VALUES
-                                                                        (1, 9, 2, 1),
-                                                                        (1, 10, 2, 1),
-                                                                        (2, 9, 2, 1),
-                                                                        (2, 10, 2, 0);
-
--- 12. Chi tiết dịp học sinh giỏi
-CREATE TABLE chi_tiet_dip_hoc_sinh_gioi(
-                                           idDip INT NOT NULL,
-                                           idNhanKhau INT NOT NULL,
-                                           truong NVARCHAR(255) NOT NULL,
-                                           lop VARCHAR(255) NOT NULL,
-                                           nhom INT NOT NULL,
-                                           minhChung NVARCHAR(255) NOT NULL,
-                                           kiemtra BOOLEAN NOT NULL,
-                                           CONSTRAINT PK_chi_tiet_dip_hoc_sinh_gioi PRIMARY KEY(idDip, idNhanKhau),
-                                           CONSTRAINT FK_chi_tiet_dip_hoc_sinh_gioi_dip_hoc_sinh_gioi FOREIGN KEY(idDip) REFERENCES dip_hoc_sinh_gioi(idDip) ON DELETE CASCADE,
-                                           CONSTRAINT FK_chi_tiet_dip_hoc_sinh_gioi FOREIGN KEY(idNhanKhau) REFERENCES nhan_khau(idNhanKhau) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
-INSERT INTO chi_tiet_dip_hoc_sinh_gioi(idDip, idNhanKhau, truong, lop, nhom, minhChung, kiemtra) VALUES
-                                                                                                     (1, 1, N'Trường THCS Chu Văn An', 6, 1, 'MC', 1),                                                                                              (1, 2, N'Trường tiểu học Chu Văn An', 2, 1, '', 1),
-                                                                                                     (2, 1, N'Trường THCS Chu Văn An', 7, 2, 'MC', 1),
-                                                                                                     (2, 2, N'Trường tiểu học Chu Văn An', 2, 1, 'MC', 1);
--- 13. Khai tử
+-- 10. Khai tử
 CREATE TABLE khai_tu(
                         idNguoiMat INT NOT NULL,
                         idNguoiKhai INT NOT NULL,
@@ -241,3 +187,65 @@ CREATE TABLE khai_tu(
 
 INSERT INTO khai_tu(idNguoiMat, idNguoiKhai, ngayKhai, ngayMat, liDoMat) VALUES
     (12, 5, '2020-10-10', '2020-10-1', 'Bệnh tim');
+--11. Thu phí
+CREATE TABLE `thu_phi` (
+  `maKhoanThu` int(11) NOT NULL,
+  `IDHoKhau` int(11) DEFAULT NULL,
+  `tenKhoanThu` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `soTien` varchar(20) DEFAULT NULL,
+  `ghiChu` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `dot` int(11) NOT NULL,
+  `ngayNop` date DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `thu_phi`
+--(34, 1, 'Chất độc màu da cam', '0', NULL, 0, '2023-02-05'),
+(35, 2, 'Chất độc màu da cam', '0', NULL, 0, '2023-02-05'),
+(36, 3, 'Chất độc màu da cam', '0', NULL, 0, '2023-02-05'),
+(37, 4, 'Chất độc màu da cam', '20000', 'cap nhat', 0, '2023-02-05'),
+(38, 5, 'Chất độc màu da cam', '0', NULL, 0, '2023-02-05'),
+(39, 1, 'Phí vệ sinh', '20000', NULL, 0, '2023-02-05'),
+(40, 2, 'Phí vệ sinh', '3000', 'cap nhat', 2023, '2023-02-05'),
+(41, 1, 'Trẻ em', '0', NULL, 0, '2023-02-05'),
+(42, 2, 'Trẻ em', '0', NULL, 0, '2023-02-05'),
+(43, 3, 'Trẻ em', '9999', 'ung ho', 0, '2023-02-05'),
+(44, 4, 'Trẻ em', '0', NULL, 0, '2023-02-05'),
+(45, 5, 'Trẻ em', '0', NULL, 0, '2023-02-05'),
+(46, 1, 'Vì Phạm Văn Trường Giang', '0', NULL, 0, '2023-02-06'),
+(47, 2, 'Vì Phạm Văn Trường Giang', '0', NULL, 0, '2023-02-06'),
+(48, 3, 'Vì Phạm Văn Trường Giang', '0', NULL, 0, '2023-02-06'),
+(49, 4, 'Vì Phạm Văn Trường Giang', '0', NULL, 0, '2023-02-06'),
+(50, 5, 'Vì Phạm Văn Trường Giang', '200000', 'bố thí', 0, '2023-02-06');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `thu_phi`
+--
+ALTER TABLE `thu_phi`
+  ADD PRIMARY KEY (`maKhoanThu`),
+  ADD KEY `IDHoKhau` (`IDHoKhau`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `thu_phi`
+--
+ALTER TABLE `thu_phi`
+  MODIFY `maKhoanThu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `thu_phi`
+--
+ALTER TABLE `thu_phi`
+  ADD CONSTRAINT `thu_phi_ibfk_1` FOREIGN KEY (`idHoKhau`) REFERENCES `ho_khau` (`idHoKhau`);
+COMMIT;
