@@ -1,6 +1,6 @@
 ﻿CREATE DATABASE quan_ly_dan_cu;
 
-USE nmcnpm_team4;
+USE quan_ly_dan_cu;
 
 -- 1. Người dùng
 CREATE TABLE nguoi_dung(
@@ -154,25 +154,7 @@ INSERT INTO tam_vang(idNhanKhau, noiTamTru, tuNgay, denNgay, lyDo) VALUES
                                                                        (4, N'Số 8 Đại Cồ Việt, Quận Hai Bà Trưng, Hà Nội', '2020-11-11', '2022-12-12', NULL),
                                                                        (9, N'Số 7 Đại Cồ Việt, Quận Hai Bà Trưng, Hà Nội', '2020-11-10', '2022-12-11', NULL);
 
--- 9. Dịp đặc biệt
-CREATE TABLE dip_dac_biet(
-                             idDip INT NOT NULL AUTO_INCREMENT,
-                             ten NVARCHAR(255) NOT NULL,
-                             nam INT NOT NULL,
-                             moTa NVARCHAR(255),
-                             phanQua05 NVARCHAR(255) NOT NULL,
-                             phanQua614 NVARCHAR(255) NOT NULL,
-                             phanQua1517 NVARCHAR(255) NOT NULL,
-                             tien05 FLOAT NOT NULL,
-                             tien614 FLOAT NOT NULL,
-                             tien1517 FLOAT NOT NULL,
-                             CONSTRAINT PK_dip_dac_biet PRIMARY KEY(idDip)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
-INSERT INTO dip_dac_biet(ten, nam, moTa, phanQua05, phanQua614, phanQua1517, tien05, tien614, tien1517) VALUES
-                                                                                                            (N'Tết Trung Thu', 2020, NULL, N'1 mũ len', N'1 khăn len', N'1 đôi tất', 20000, 23000, 15000),
-                                                                                                            (N'Giáng Sinh', 2020, NULL, N'1 gấu bông', N'5 cây kẹo mút', N'1 bao tay', 30000, 20000, 25000);
--- 10. Khai tử
+-- 9. Khai tử
 CREATE TABLE khai_tu(
                         idNguoiMat INT NOT NULL,
                         idNguoiKhai INT NOT NULL,
@@ -187,37 +169,18 @@ CREATE TABLE khai_tu(
 
 INSERT INTO khai_tu(idNguoiMat, idNguoiKhai, ngayKhai, ngayMat, liDoMat) VALUES
     (12, 5, '2020-10-10', '2020-10-1', 'Bệnh tim');
---11. Thu phí
-CREATE TABLE `thu_phi` (
-  `maKhoanThu` int(11) NOT NULL,
-  `IDHoKhau` int(11) DEFAULT NULL,
-  `tenKhoanThu` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
-  `soTien` varchar(20) DEFAULT NULL,
-  `ghiChu` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
-  `dot` int(11) NOT NULL,
-  `ngayNop` date DEFAULT NULL
+-- 10. Thu phí
+CREATE TABLE thu_phi (
+  maKhoanThu int(11) NOT NULL,
+  IDHoKhau int(11) DEFAULT NULL,
+  tenKhoanThu varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  soTien varchar(20) DEFAULT NULL,
+  ghiChu varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  dot int(11) NOT NULL,
+  ngayNop date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `thu_phi`
---(34, 1, 'Chất độc màu da cam', '0', NULL, 0, '2023-02-05'),
-(35, 2, 'Chất độc màu da cam', '0', NULL, 0, '2023-02-05'),
-(36, 3, 'Chất độc màu da cam', '0', NULL, 0, '2023-02-05'),
-(37, 4, 'Chất độc màu da cam', '20000', 'cap nhat', 0, '2023-02-05'),
-(38, 5, 'Chất độc màu da cam', '0', NULL, 0, '2023-02-05'),
-(39, 1, 'Phí vệ sinh', '20000', NULL, 0, '2023-02-05'),
-(40, 2, 'Phí vệ sinh', '3000', 'cap nhat', 2023, '2023-02-05'),
-(41, 1, 'Trẻ em', '0', NULL, 0, '2023-02-05'),
-(42, 2, 'Trẻ em', '0', NULL, 0, '2023-02-05'),
-(43, 3, 'Trẻ em', '9999', 'ung ho', 0, '2023-02-05'),
-(44, 4, 'Trẻ em', '0', NULL, 0, '2023-02-05'),
-(45, 5, 'Trẻ em', '0', NULL, 0, '2023-02-05'),
-(46, 1, 'Vì Phạm Văn Trường Giang', '0', NULL, 0, '2023-02-06'),
-(47, 2, 'Vì Phạm Văn Trường Giang', '0', NULL, 0, '2023-02-06'),
-(48, 3, 'Vì Phạm Văn Trường Giang', '0', NULL, 0, '2023-02-06'),
-(49, 4, 'Vì Phạm Văn Trường Giang', '0', NULL, 0, '2023-02-06'),
-(50, 5, 'Vì Phạm Văn Trường Giang', '200000', 'bố thí', 0, '2023-02-06');
-
 --
 -- Indexes for dumped tables
 --
@@ -225,19 +188,16 @@ CREATE TABLE `thu_phi` (
 --
 -- Indexes for table `thu_phi`
 --
-ALTER TABLE `thu_phi`
-  ADD PRIMARY KEY (`maKhoanThu`),
-  ADD KEY `IDHoKhau` (`IDHoKhau`);
+ALTER TABLE thu_phi
+  ADD PRIMARY KEY (maKhoanThu),
+  ADD KEY IDHoKhau (IDHoKhau);
 
---
--- AUTO_INCREMENT for dumped tables
---
 
 --
 -- AUTO_INCREMENT for table `thu_phi`
 --
-ALTER TABLE `thu_phi`
-  MODIFY `maKhoanThu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
+ALTER TABLE thu_phi
+  MODIFY maKhoanThu int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 
 --
 -- Constraints for dumped tables
@@ -248,4 +208,7 @@ ALTER TABLE `thu_phi`
 --
 ALTER TABLE `thu_phi`
   ADD CONSTRAINT `thu_phi_ibfk_1` FOREIGN KEY (`idHoKhau`) REFERENCES `ho_khau` (`idHoKhau`);
-COMMIT;
+
+
+
+
