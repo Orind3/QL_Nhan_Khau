@@ -197,7 +197,7 @@ ALTER TABLE thu_phi
 -- AUTO_INCREMENT for table `thu_phi`
 --
 ALTER TABLE thu_phi
-  MODIFY maKhoanThu int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
+MODIFY maKhoanThu int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 
 --
 -- Constraints for dumped tables
@@ -209,6 +209,36 @@ ALTER TABLE thu_phi
 ALTER TABLE `thu_phi`
   ADD CONSTRAINT `thu_phi_ibfk_1` FOREIGN KEY (`idHoKhau`) REFERENCES `ho_khau` (`idHoKhau`);
 
+-- Dumping data for table `thu_phi`
+--
 
+INSERT INTO `thu_phi` (`maKhoanThu`, `IDHoKhau`, `tenKhoanThu`, `soTien`, `ghiChu`, `dot`, `ngayNop`) VALUES
+(1, 1, 'Chất độc màu da cam', '0', NULL, 0, '2023-02-05'),
+(2, 2, 'Chất độc màu da cam', '0', NULL, 0, '2023-02-05'),
+(3, 3, 'Chất độc màu da cam', '0', NULL, 0, '2023-02-05'),
+(4, 4, 'Chất độc màu da cam', '20000', 'cap nhat', 0, '2023-02-05'),
+(5, 5, 'Chất độc màu da cam', '0', NULL, 0, '2023-02-05'),
+(6, 1, 'Phí vệ sinh', '20000', NULL, 0, '2023-02-05'),
+(7, 2, 'Phí vệ sinh', '3000', 'cap nhat', 2023, '2023-02-05'),
+(8, 1, 'Trẻ em', '0', NULL, 0, '2023-02-05'),
+(9, 2, 'Trẻ em', '0', NULL, 0, '2023-02-05'),
+(10, 3, 'Trẻ em', '9999', 'ung ho', 0, '2023-02-05'),
+(11, 4, 'Trẻ em', '0', NULL, 0, '2023-02-05'),
+(12, 5, 'Trẻ em', '0', NULL, 0, '2023-02-05'),
+(13, 1, 'Vì Phạm Văn Trường Giang', '0', NULL, 0, '2023-02-06'),
+(14, 2, 'Vì Phạm Văn Trường Giang', '0', NULL, 0, '2023-02-06'),
+(15, 3, 'Vì Phạm Văn Trường Giang', '0', NULL, 0, '2023-02-06'),
+(16, 4, 'Vì Phạm Văn Trường Giang', '0', NULL, 0, '2023-02-06'),
+(17, 5, 'Vì Phạm Văn Trường Giang', '200000', 'bố thí', 0, '2023-02-06'),
+(18, 1, 'Vì Phạm Văn Trường Giang', '0', NULL, 1, '2023-02-09'),
+(19, 2, 'Vì Phạm Văn Trường Giang', '0', NULL, 1, '2023-02-09'),
+(20, 3, 'Vì Phạm Văn Trường Giang', '0', NULL, 1, '2023-02-09'),
+(21, 4, 'Vì Phạm Văn Trường Giang', '0', NULL, 1, '2023-02-09'),
+(22, 5, 'Vì Phạm Văn Trường Giang', '0', NULL, 1, '2023-02-09'),
+(23, 1, 'Vì người nghèo', '0', NULL, 0, '2023-02-09'),
+(24, 2, 'Vì người nghèo', '0', NULL, 0, '2023-02-09'),
+(25, 3, 'Vì người nghèo', '0', NULL, 0, '2023-02-09'),
+(26, 4, 'Vì người nghèo', '0', NULL, 0, '2023-02-09'),
+(27, 5, 'Vì người nghèo', '0', NULL, 0, '2023-02-09');
 
 
