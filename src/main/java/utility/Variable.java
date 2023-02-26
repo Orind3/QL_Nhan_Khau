@@ -17,16 +17,4 @@ public class Variable {
     public static String HO_KHAU_THUONG_TRU = "Thường trú";
     public static String HO_KHAU_DA_CHUYEN_DI = "Đã chuyển đi";
 
-    // phan thuong
-    public static String ID_DIP = "ID Dịp trao thưởng";
-    public static String NAM_HOC = "Năm học";
-    public static String TEN_DIP = "Tên dịp trao thưởng";
-    public static String DAC_BiET = "Học sinh đặc biệt";
-    public static String GIOI = "Học sinh giỏi";
-    public static String KHA = "Học sinh khá";
-    public static String T05 = "Độ tuổi từ 0 đến 5";
-    public static String T614 = "Độ tuổi từ 6 đến 14";
-    public static String T1517 = "Độ tuổi từ 15 đến 17";
-    public static String THANH_TICH = "Thành tích";
-    public static String NHOM = "Nhóm tuổi";
 }

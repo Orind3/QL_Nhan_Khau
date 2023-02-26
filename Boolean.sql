@@ -225,20 +225,8 @@ INSERT INTO `thu_phi` (`maKhoanThu`, `IDHoKhau`, `tenKhoanThu`, `soTien`, `ghiCh
 (10, 3, 'Trẻ em', '9999', 'ung ho', 0, '2023-02-05'),
 (11, 4, 'Trẻ em', '0', NULL, 0, '2023-02-05'),
 (12, 5, 'Trẻ em', '0', NULL, 0, '2023-02-05'),
-(13, 1, 'Vì Phạm Văn Trường Giang', '0', NULL, 0, '2023-02-06'),
-(14, 2, 'Vì Phạm Văn Trường Giang', '0', NULL, 0, '2023-02-06'),
-(15, 3, 'Vì Phạm Văn Trường Giang', '0', NULL, 0, '2023-02-06'),
-(16, 4, 'Vì Phạm Văn Trường Giang', '0', NULL, 0, '2023-02-06'),
-(17, 5, 'Vì Phạm Văn Trường Giang', '200000', 'bố thí', 0, '2023-02-06'),
-(18, 1, 'Vì Phạm Văn Trường Giang', '0', NULL, 1, '2023-02-09'),
-(19, 2, 'Vì Phạm Văn Trường Giang', '0', NULL, 1, '2023-02-09'),
-(20, 3, 'Vì Phạm Văn Trường Giang', '0', NULL, 1, '2023-02-09'),
-(21, 4, 'Vì Phạm Văn Trường Giang', '0', NULL, 1, '2023-02-09'),
-(22, 5, 'Vì Phạm Văn Trường Giang', '0', NULL, 1, '2023-02-09'),
 (23, 1, 'Vì người nghèo', '0', NULL, 0, '2023-02-09'),
 (24, 2, 'Vì người nghèo', '0', NULL, 0, '2023-02-09'),
 (25, 3, 'Vì người nghèo', '0', NULL, 0, '2023-02-09'),
 (26, 4, 'Vì người nghèo', '0', NULL, 0, '2023-02-09'),
 (27, 5, 'Vì người nghèo', '0', NULL, 0, '2023-02-09');
-
-
